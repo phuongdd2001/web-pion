@@ -1,0 +1,70 @@
+@import "./variables";
+// @import "node_modules/@ckeditor/ckeditor5-table/theme/tablecolumnresize.css";
+// @import "node_modules/@ctrl/ngx-emoji-mart/picker";
+
+:root {
+    --ck-color-image-caption-background: hsl(0, 0%, 97%);
+    --ck-color-image-caption-text: hsl(0, 0%, 20%);
+    --ck-color-mention-background: hsla(341, 100%, 30%, 0.1);
+    --ck-color-mention-text: hsl(341, 100%, 30%);
+    --ck-color-selector-caption-background: hsl(0, 0%, 97%);
+    --ck-color-selector-caption-text: hsl(0, 0%, 20%);
+    --ck-highlight-marker-blue: hsl(201, 97%, 72%);
+    --ck-highlight-marker-green: hsl(120, 93%, 68%);
+    --ck-highlight-marker-pink: hsl(345, 96%, 73%);
+    --ck-highlight-marker-yellow: hsl(60, 97%, 73%);
+    --ck-highlight-pen-green: hsl(112, 100%, 27%);
+    --ck-highlight-pen-red: hsl(0, 85%, 49%);
+    --ck-image-style-spacing: 1.5em;
+    --ck-inline-image-style-spacing: calc(var(--ck-image-style-spacing) / 2);
+    --ck-todo-list-checkmark-size: 16px;
+}
+
+.des-content {
+    p, span, li {
+        font-size: 17px;
+        line-height: 27px;
+    }
+    ol, ul {
+        list-style: auto;
+        margin-left: 15px;
+    }
+    &.motto-football {
+        strong {
+            text-transform: capitalize;
+        }
+    }
+}
+
+@media not all and (min-width: 1024px) {
+    .des-content {
+        p, span, li {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+}
+
+@media not all and (min-width: 768px) {
+    .des-content {
+        p, span, li {
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+
+    .selection-motto-culture  .des-content {
+        p, span, li {
+            font-size: 8.5px;
+            line-height: 12.5px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    [data-aos] {
+      pointer-events: auto !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }

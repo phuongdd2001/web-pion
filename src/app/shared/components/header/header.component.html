@@ -1,0 +1,57 @@
+<div id="header">
+    <div [ngClass]="showScroll ? 'header-up' : 'header-down'" class="h-20"
+        style="box-shadow: 0px 4px 8px 0px #00000014;">
+        <div class="h-full flex items-center justify-between container mx-auto px-10
+       max-lg:justify-end">
+            <div class="header-logo max-lg:absolute
+        max-lg:right-[50%] max-lg:translate-x-[50%]
+        ">
+                <a [routerLink]="['']" [rel]="'dofollow'">
+                    <img src="assets/images/global/logo.svg" alt="Pion Vietnam" title="Pion Vietnam" width=""
+                        height="" />
+                </a>
+            </div>
+            <div class="max-lg:hidden">
+                <nav id="nav">
+                    <ul id="navigation" class="flex items-center justify-center gap-x-6">
+                        @for (item of menu; track $index) {
+                        <li>
+                            <a class="text-linkHeader font-semibold py-2 px-[22px] block w-full h-full ease-in duration-300 hover:text-colorActive"
+                                [routerLinkActiveOptions]="{
+                exact: true
+            }" [routerLinkActive]="['is-active']" [routerLink]="item.link">{{
+                                item.title }}
+                            </a>
+                        </li>
+                        }
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <div class="flex items-center justify-center gap-x-2">
+                    <p class="text-linkHeader font-semibold py-2 px-[14.5px] block w-full h-full">VN</p>
+                    <p class="text-linkHeader font-semibold py-2 px-[14.5px] block w-full h-full">EN</p>
+                </div>
+            </div>
+            <!-- <div class="hidden max-lg:block">
+          <div class="cursor-pointer w-[40px] h-[40px] flex items-center justify-center" (click)="this.openMenuMobile = !this.openMenuMobile"
+              ><img
+                  src="assets/images/menu.svg"
+                  alt="Facebook Govo"
+                  title="Facebook Govo"
+          /></div>
+        </div> -->
+        </div>
+        <div class="relative z-[9999]" *ngIf="this.openMenuMobile">
+            <ul class="absolute w-full bg-[#181818] flex justify-center flex-col items-center gap-y-6 py-6">
+                @for (item of menu; track $index) {
+                <li class="nav-item">
+                    <a class="leading-[24px] text-white text-[16px] font-medium cursor-pointer">{{ item.title }}
+                    </a>
+                </li>
+                }
+            </ul>
+        </div>
+    </div>
+
+</div>
