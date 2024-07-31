@@ -9,35 +9,132 @@
         <div class="flex justify-center">
             <img src="assets/images/pages/home/banner_1.svg" alt="" />
         </div>
-        
+
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <h1 class="text-[56px] leading-[84px] font-extrabold uppercase"><span class="text-[#0B91D0]">Piontech
                 </span><span class="text-colorActive">software</span></h1>
             <p class="text-sizeMedium font-semibold">Mobile application software development company</p>
         </div>
     </div>
-    <div class="flex items-center gap-8">
+    <div class="flex items-center gap-8 px-[calc(100%_/_12)]">
         <div>
             <img src="assets/images/pages/home/phone.png" alt="" />
         </div>
         <div>
-            @for (item of achievement; track $index) {
-                <div>
-                    <div class="flex items-center gap-x-10">
-                        <div>
-                            <img [src]="item.icon" alt="" />
-                        </div>
-                        <div>
-                            <p class="text-sizeMedium font-medium mb-2">{{item.title}}</p>
-                            <p class="text-colorActive font-bold text-[40px] leading-[50px]">{{item.des}}</p>
-                        </div>
+            @for (item of achievement; track $index; let last = $last) {
+            <div>
+                <div class="flex items-center gap-x-10">
+                    <div>
+                        <img [src]="item.icon" alt="" />
                     </div>
-                    <div class="flex flex-col gap-y-[10px] my-5 ml-[55px]">
-                        @for (item of [].constructor(5); track $index) {
-                            <div class="w-[5px] h-[5px] bg-[#00ADFF] rounded-full"></div>
-                        }
+                    <div>
+                        <p class="text-sizeMedium font-medium mb-2">{{item.title}}</p>
+                        <p class="text-colorActive font-bold text-[40px] leading-[50px]">{{item.des}}</p>
                     </div>
                 </div>
+                @if(!last) {
+                <div class="flex flex-col gap-y-[10px] my-5 ml-[55px]">
+                    @for (item of [].constructor(5); track $index) {
+                    <div class="w-[5px] h-[5px] bg-[#00ADFF] rounded-full"></div>
+                    }
+                </div>
+                }
+
+            </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="bg-no-repeat bg-[url('assets/images/pages/home/banner_2.png')] bg-cover bg-top">
+    <div class="container mx-auto py-[126px]">
+        <div class="grid grid-cols-3 gap-8">
+            @for (item of [].constructor(5); track $index;) {
+            <div class="relative rounded-[20px] max-sm:rounded-[12px] bg-white">
+                <div class="z-20 block">
+                    <img src="assets/images/pages/home/product.jpg" alt="Product Pion" title="Product Pion" width="100%"
+                        height="100%" class="rounded-t-[20px] max-sm:rounded-t-[12px]" />
+                    <div class="py-8 px-6 flex items-center gap-x-4">
+                        <div>
+                            <img src="assets/images/pages/home/img_ic_app.png" alt="thumbnail product"
+                                title="thumbnail product" width="120" height="120"
+                                class="max-w-max rounded-2xl max-sm:w-[28.75px] max-sm:h-[28.75px]" />
+                        </div>
+                        <div>
+                            <p class=" font-semibold text-sizeProduct mb-2 max-sm:text-[10px] max-sm:leading-[15px]">
+                                Tên ứng dụng
+                            </p>
+                            <p class="line-clamp-3  text-sm leading-6 max-sm:text-[8px] max-sm:leading-[12px]">
+                                A short text description of less than 80 characters, introducing the main features of
+                                the application. A short text description
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="" class="flex items-center justify-center gap-x-3 text-colorLinkDefault text-sizeProduct font-semibold
+                        py-8 mx-6 mb-2 border-t border-[#E1E1E1] border-solid">
+                            <img src="assets/images/pages/home/ic_GooglePplay.svg" alt="" width="32" height="32"
+                                class="max-w-max" />
+                            <span>Get it on Google play</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            }
+            <div class="relative rounded-[20px] max-sm:rounded-[12px] bg-white px-12 pt-[30px] pb-5">
+                <div class="text-center px-5">
+                    <img src="assets/images/pages/home/more_product.svg" alt="" width="100%" height="100%" />
+                    <p class="text-sizeProduct font-medium">Let's check out more our 16+ other apps
+                        on the Google Store</p>
+                    <a href="" class="bg-colorLinkDefault p-3 inline-block rounded-full mt-[38px]">
+                        <img src="assets/images/global/ic_back.svg" alt="" width="32" height="32" class="max-w-max" />
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div>
+    <div class="container mx-auto py-20">
+        <app-title-component title="Our Teams"></app-title-component>
+        <div class="grid grid-cols-3 gap-8 mt-20">
+            @for (item of bannerTeams; track $index;) {
+            <div class="relative rounded-[20px] max-sm:rounded-[12px] bg-white border border-[#F0F0F0] border-solid">
+                <div class="block">
+                    <div class="">
+                        <div class="bg-no-repeat bg-contain bg-top px-20 rounded-t-[20px]" [style]="{
+                            'background-image': 'url(' + item + ')',
+                          }">
+                            <img src="assets/images/pages/home/img_team.png" alt="Product Pion" title="Product Pion"
+                                width="100%" height="100%" class="rounded-full border-8 border-white relative top-12 mb-12" />
+                        </div>
+                    </div>
+                    <div class="px-12 pb-4">
+                        <div class="text-center py-6">
+                            <p class=" font-semibold text-sizeProduct mb-2 max-sm:text-[10px] max-sm:leading-[15px]">
+                                Team_name
+                            </p>
+                            <p class="line-clamp-4 text-sm leading-6 max-sm:text-[8px] max-sm:leading-[12px]">
+                                A short text description of less than 80 characters, introducing the main features of
+                                the application. A short text description of less than 80 characters, introducing the
+                                main features
+                            </p>
+                        </div>
+                        <div>
+                            <a href="" class="flex items-center justify-center gap-x-3 text-colorLinkDefault text-sizeProduct font-semibold
+                                py-8 border-t border-[#E1E1E1] border-solid">
+                                <img src="assets/images/pages/home/Rocket.svg" alt="" width="32" height="32"
+                                    class="max-w-max" />
+                                <span>Explore</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
             }
         </div>
     </div>

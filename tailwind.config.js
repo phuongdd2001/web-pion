@@ -26,11 +26,13 @@ module.exports = {
                 blackMainApp: "#14171C",
                 yellowMain: "#FEC00F",
                 colorActive: '#F79F1F',
+                colorLinkDefault: '#00ADFF',
             },
             fontSize: {
                 linkHeader: ["18px", "32px"],
                 sizeDefault: ["16px", "32px"],
                 sizeMedium: ["24px", "36px"],
+                sizeProduct: ["18px", "24px"],
                 sizeDefaultMobile: ["13px", "16px"],
                 titleDefaultMobile: ["14px", "24px"],
             },
