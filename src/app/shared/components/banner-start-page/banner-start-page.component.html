@@ -1,6 +1,8 @@
 <div class="relative">
-    <img [src]="link()" alt="" width="100%" height="" class="object-cover h-[360px]" />
-    <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
+    <div class="z-[1] before:bg-black/30 before:w-full before:h-full before:block  before:absolute">
+        <img [src]="link()" alt="" width="100%" height="" class="object-cover h-[360px]" />
+    </div>
+    <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-[2]">
         <h1 class="text-5xl leading-[72px] text-white font-bold">{{title()}}</h1>
     </div>
 </div>

@@ -17,5 +17,20 @@ export const routes: Routes = [
             ),
         title: 'Teams',
     },
+    {
+        path: 'tuyen-dung',
+        loadComponent: () =>
+            import('../../pages/recruit/recruit.component').then(
+                (m) => m.RecruitComponent
+            ),
+        title: 'Tuyển dụng',
+    },
+    {
+        path: 'tuyen-dung/:slug',
+        loadComponent: () =>
+            import(
+                '../../pages/recruit/components/recruit-detail/recruit-detail.component'
+            ).then((m) => m.RecruitDetailComponent),
+    },
 ];
 

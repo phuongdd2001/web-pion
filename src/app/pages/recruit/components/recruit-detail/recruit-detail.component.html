@@ -1,0 +1,32 @@
+<app-banner-start-page link="assets/images/pages/recruit/banner.jpg" title="Recruit" />
+<div class="bg-[#F8F8F8] pt-8">
+    <div class="container mx-auto">
+        <p class="text-sizeDefaultRecuit font-medium">Home / Recruit / Apply</p>
+        <h2 class="text-2xl leading-10 font-semibold text-colorLinkDefault mt-4">iOS and Android SENIOR mobile app developer</h2>
+        <div class="grid grid-cols-4 gap-x-8 mt-8">
+            <div class="col-span-3">
+                <div class="bg-white rounded-[20px] pt-8 px-[50px] pb-[50px]">
+                    <div
+                        class="des-html text-base leading-8"
+                        [innerHtml]="des"
+                    ></div>
+                    <div class="border-t border-[#F0F0F0] border-solid pt-8 mt-8">
+                        <ul class="flex flex-col  gap-y-6">
+                            @for (item of contactsInfo; track $index) {
+                                <li class="flex items-center gap-x-[10px]">
+                                    <img [src]="item.icon" width="24" height="24" alt="" />
+                                    <a [href]="item.link">{{item.title}}</a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-1">
+                <div class="bg-white rounded-[20px] pt-8 px-8 pb-12">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
