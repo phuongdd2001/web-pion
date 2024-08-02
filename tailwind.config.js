@@ -31,6 +31,7 @@ module.exports = {
             fontSize: {
                 linkHeader: ["18px", "32px"],
                 sizeDefault: ["16px", "32px"],
+                sizeDefaultRecuit: ["16px", "24px"],
                 sizeMedium: ["24px", "36px"],
                 sizeProduct: ["18px", "24px"],
                 sizeDefaultMobile: ["13px", "16px"],

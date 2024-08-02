@@ -7,7 +7,15 @@ export const routes: Routes = [
             import('../../pages/home/home.component').then(
                 (m) => m.HomeComponent
             ),
-        title: 'Trang chủ',
+        title: 'Home',
+    },
+    {
+        path: 'chung-toi',
+        loadComponent: () =>
+            import('../../pages/teams/teams.component').then(
+                (m) => m.TeamsComponent
+            ),
+        title: 'Teams',
     },
 ];
 

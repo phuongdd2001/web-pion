@@ -16,3 +16,26 @@ body {
 .is-active {
     color: var(--color-active);
 }
+
+#header {
+    .header-down {
+        transition: all 0.4s ease-out;
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -o-transform: translateY(0);
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+
+    }
+}
+
+#header {
+    .header-up {
+        transition: all 0.4s ease-out;
+        -ms-transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+}

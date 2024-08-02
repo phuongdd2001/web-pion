@@ -1,0 +1,45 @@
+<app-banner-start-page />
+<div class="mt-[120px] container mx-auto">
+    <div class="flex flex-col gap-y-[150px]">
+        @for (item of [].constructor(3); track $index) {
+        <div class="flex items-center gap-x-[82px] team">
+            <div class="banner relative">
+                <div class="img_bg absolute right-0 top-0 w-full z-[-1]">
+                    <img src="assets/images/pages/teams/img_cover.png" width="100%" height="100%" class="max-w-max" />
+                </div>
+                <div class="img_avatar pt-20 w-full flex justify-end items-center gap-x-[82px]">
+                    <div class="img">
+                        <img src="assets/images/pages/teams/img_ic_app.jpg" width="100%" height="100%"
+                        class="rounded-full max-w-max" />
+                    </div>
+                    <div class="content w-6/12">
+                        <h4 class="text-3xl leading-[48px] font-semibold">Team_name</h4>
+                        <p class="text-sizeMedium mt-6">A short text description of less than 80 characters, introducing the
+                            main features of the application. A
+                            short text description of less than 80 characters, introducing the main features of the application.
+                            A
+                            short text description of less than 80 characters, introducing the main features of the application.
+                        </p>
+                        <div class="inline-block mt-12">
+                            <a href="" class="flex items-center justify-center gap-x-3 text-colorLinkDefault text-sizeProduct font-semibold
+                                        py-6 pl-24 pr-[125px] border border-colorLinkDefault border-solid rounded-[20px]">
+                                <img src="assets/images/pages/home/Rocket.svg" alt="" width="32" height="32"
+                                    class="max-w-max m-2" />
+                                <span class="text-[32px] leading-[48px] font-semibold">Explore</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+            </div>
+            
+        </div>
+        }
+    </div>
+
+    <div class="mt-[130px] mb-[144px] p-[30px]">
+        <img src="assets/images/pages/teams/banner.jpg" width="100%" height="100%" />
+    </div>
+</div>
