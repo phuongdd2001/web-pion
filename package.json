@@ -4,10 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --source-map --configuration production",
+    "build:prod": "npm run build -- --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:web-pion": "node dist/web-pion/server/server.mjs"
+    "dev:ssr": "ng run web-pion:serve-ssr",
+    "serve:ssr:web-pion": "node server/server.mjs",
+    "build:ssr": "ng build && ng run web-pion:server"
   },
   "private": true,
   "dependencies": {
