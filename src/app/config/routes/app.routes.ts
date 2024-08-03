@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { PageErrorComponent } from '@pages/error/page-error.component';
 
 export const routes: Routes = [
     {
@@ -40,5 +41,16 @@ export const routes: Routes = [
             ),
         title: 'Liên hệ',
     },
+    {
+        path: 'het-han',
+        loadComponent: () =>
+            import('../../pages/error/page-expired.component').then(
+                (m) => m.PageExpiredComponent
+            ),
+        title: 'Trang hết hạn',
+    },
+    {
+        path: '**',
+        component: PageErrorComponent,
+    },
 ];
-
