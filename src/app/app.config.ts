@@ -1,4 +1,4 @@
-import { APP_INITIALIZER, ApplicationConfig, importProvidersFrom } from '@angular/core';
+import { APP_INITIALIZER, ApplicationConfig, importProvidersFrom, provideExperimentalZonelessChangeDetection } from '@angular/core';
 import { InMemoryScrollingFeature, InMemoryScrollingOptions, provideRouter, withInMemoryScrolling } from '@angular/router';
 import { BrowserModule, provideClientHydration, withHttpTransferCacheOptions } from '@angular/platform-browser';
 import { routes } from './config/routes/app.routes';
@@ -44,6 +44,7 @@ export const appConfig: ApplicationConfig = {
         ]),
         provideAnimations(),
         provideHttpClient(withFetch(), withInterceptorsFromDi()),
+        provideExperimentalZonelessChangeDetection(),
         LanguageService,
         {
             provide: APP_INITIALIZER,
