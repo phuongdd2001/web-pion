@@ -32,5 +32,13 @@ export const routes: Routes = [
                 '../../pages/recruit/components/recruit-detail/recruit-detail.component'
             ).then((m) => m.RecruitDetailComponent),
     },
+    {
+        path: 'lien-he',
+        loadComponent: () =>
+            import('../../pages/contact/contact.component').then(
+                (m) => m.ContactComponent
+            ),
+        title: 'Liên hệ',
+    },
 ];
 
