@@ -1,21 +1,20 @@
 <div class="bg-[#0F1A2B] py-[63px] relative">
     <div class="container mx-auto">
-        <div class="px-[calc(100%_/_12)] grid grid-cols-3 max-sm:gap-x-[4px] max-lg:gap-x-[74px]">
-            <div class="py-[17px]">
+        <div class="grid grid-cols-4 max-sm:gap-x-[4px] max-lg:gap-x-[74px]">
+            <div class="flex justify-center">
                 <a [routerLink]="''" [rel]="'dofollow'">
                     <img src="assets/images/global/logo_footer.svg" alt="logo Pion Vietnam" title="logo Pion Vietnam" />
                 </a>
             </div>
-            <div class="border-l border-white/40 border-solid pl-[60px] py-[33px]">
+            <div class="border-l border-white/40 border-solid pl-9 py-2">
                 <nav class="flex items-center h-full">
-                    <ul class="grid grid-rows-3 grid-flow-col gap-y-4 w-full list-disc">
+                    <ul class="flex flex-col gap-y-4 w-full list-disc">
                         @for (item of menus; track $index) {
                         <li class="text-white text-sizeDefault font-medium duration-300 ease-in-out hover:text-colorActive"
                             [routerLinkActive]="['is-active']" [routerLinkActiveOptions]="{
                             exact: true
                         }">
-                            <a class="  block w-full h-full "
-                                [routerLink]="item.link">
+                            <a class="  block w-full h-full " [routerLink]="item.link">
                                 {{item.title}}
                             </a>
                         </li>
@@ -24,8 +23,8 @@
                     </ul>
                 </nav>
             </div>
-            <div class="border-l border-white/40 border-solid pl-[60px] py-[13px]">
-                <div class="flex flex-col gap-y-2">
+            <div class="border-l border-white/40 border-solid pl-4 py-2">
+                <div class="flex flex-col gap-y-4">
                     @for (item of contactsInfo; track $index) {
                     <div class="flex items-center gap-x-[10px] max-sm:gap-x-[4px]">
                         <img [src]="item.icon" alt="" title="" width="24" height="24" />
@@ -35,6 +34,13 @@
                     </div>
                     }
                 </div>
+            </div>
+            <div class="flex items-center ml-4">
+                <iframe
+                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100089142523230&tabs=timeline&width=292&height=132&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=287244537376508"
+                    width="292" height="132" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowfullscreen="true"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
         </div>
     </div>

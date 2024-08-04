@@ -1,6 +1,7 @@
-import { DIALOG_DATA, DialogRef } from '@angular/cdk/dialog';
+import { Dialog, DIALOG_DATA, DialogRef } from '@angular/cdk/dialog';
 import { CommonModule } from '@angular/common';
 import { Component, Inject } from '@angular/core';
+import { DialogSuccessComponent } from '../dialog-success/dialog-success.component';
 
 export interface DialogData {
     animal: 'panda' | 'unicorn' | 'lion';
@@ -18,7 +19,11 @@ export class DialogRecruitComponent {
     files: File[] = [];
     dataFile: number = 0;
 
-    constructor( public dialogRef: DialogRef<string>,@Inject(DIALOG_DATA) public data: DialogData) { }
+    constructor(
+        public dialogRef: DialogRef<string>, 
+        @Inject(DIALOG_DATA) public data: DialogData,
+        public dialog: Dialog
+    ) { }
 
     openFileDialog() {
         document.getElementById('upload-file')?.click();
@@ -27,7 +32,7 @@ export class DialogRecruitComponent {
     fileChangeEvent(event: any): void {
         this.files.push(...event.target.files);
         this.totalSizeFile();
-        
+
     }
 
     handleFileDelete(f: any) {
@@ -44,5 +49,13 @@ export class DialogRecruitComponent {
         let fSize = totalData / 1024;
         let sizeMB = fSize / 1024;
         this.dataFile = Number(sizeMB.toFixed(2));
+    }
+
+    openDialog() {
+        this.dialogRef.close();
+        this.dialog.open(DialogSuccessComponent, {
+            width: '480px',
+            panelClass: 'dialog-success',
+        });
     }
 }

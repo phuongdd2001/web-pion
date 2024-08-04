@@ -13,3 +13,9 @@ export const ContactsInfo: ContactInfo[] = [
     { title: 'Contact@pion.tech', icon: 'assets/images/pages/footer/ic_mail.svg' },
     { title: 'Khuất Duy Tiến, Thanh Xuân, Hà Nội', icon: 'assets/images/pages/footer/ic_location.svg' },
 ];
+
+export const ContactsPage: ContactInfo[] = [
+    { title: '+84 123 456 789', icon: 'assets/images/pages/contact/ic_phone.svg', },
+    { title: 'Contact@pion.tech', icon: 'assets/images/pages/contact/ic_mail.svg', },
+    { title: 'Khuất Duy Tiến, Thanh Xuân, Hà Nội', icon: 'assets/images/pages/contact/ic_location.svg' },
+];

@@ -7,15 +7,15 @@
     </div>
     <form class="flex flex-col gap-y-2 mt-4">
         <div class="flex items-center gap-x-2 bg-white rounded-lg py-4 px-3">
-            <img src="assets/images/pages/contact/ic_name.svg" alt="" width="24" height="24" />
+            <img src="assets/images/pages/contact/ic_name_form.svg" alt="" width="24" height="24" />
             <input type="text" class="w-full outline-none" placeholder="Tên của ban" />
         </div>
         <div class="flex items-center gap-x-2 bg-white rounded-lg py-4 px-3">
-            <img src="assets/images/pages/contact/ic_email.svg" alt="" width="24" height="24" />
+            <img src="assets/images/pages/contact/ic_email_form.svg" alt="" width="24" height="24" />
             <input type="text" class="w-full outline-none" placeholder="Email của bạn" />
         </div>
         <div class="flex items-center gap-x-2 bg-white rounded-lg py-4 px-3">
-            <img src="assets/images/pages/contact/ic_phone.svg" alt="" width="24" height="24" />
+            <img src="assets/images/pages/contact/ic_phone_form.svg" alt="" width="24" height="24" />
             <input type="text" class="w-full outline-none" placeholder="Số điện thoại của bạn" />
         </div>
         <div>
@@ -72,7 +72,7 @@
             }
         }
     </div>
-    <button type="button"
+    <button type="button" (click)="openDialog()"
         class="mt-4 text-base leading-7 font-bold text-white py-[10px] rounded-lg w-full h-full block text-center"
         [style]="false ? 'background-color: #00ADFF' : 'background-color:#E1E1E1'">
         nộp hồ sơ

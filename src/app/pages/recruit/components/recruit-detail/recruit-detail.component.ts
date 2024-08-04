@@ -16,7 +16,7 @@ export class RecruitDetailComponent {
 
     contactsInfo: { icon: string, title: string, link: string }[] = [
         { icon: 'assets/images/pages/recruit/ic_phone.svg', title: '+84 123 456 789', link: 'tel:+84 867.468.845' },
-        { icon: 'assets/images/pages/recruit/ic_mail.svg', title: 'Tuyendung@Pion.tech', link: 'mailto:tuyendung@volio.vn' },
+        { icon: 'assets/images/pages/recruit/ic_mail.svg', title: 'Tuyendung@Pion.tech', link: 'mailto:tuyendung@Pion.tech' },
         { icon: 'assets/images/pages/recruit/ic_fb.svg', title: 'Facebook.com/Pion.tech', link: 'https://www.facebook.com/profile.php?id=100089142523230' },
         { icon: 'assets/images/pages/recruit/ic_location.svg', title: 'Khuất Duy Tiến, Thanh Xuân Trung, Thanh Xuân, Hà Nội ', link: 'https://maps.app.goo.gl/1uccHB4a7ycRboxFA' }
     ]
