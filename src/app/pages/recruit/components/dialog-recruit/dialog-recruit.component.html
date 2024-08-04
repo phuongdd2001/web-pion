@@ -1,5 +1,10 @@
 <div class="w-full">
-    <h3 class="text-sizeProduct font-bold text-colorLinkDefault">Thông tin ứng tuyển:</h3>
+    <div class="flex justify-between items-center gap-x-4">
+        <h3 class="text-sizeProduct font-bold text-colorLinkDefault">Thông tin ứng tuyển:</h3>
+        <button type="button" (click)="dialogRef.close()">
+            <img src="assets/images/pages/recruit/ic_close.svg" alt="" width="16" height="16" />
+        </button>
+    </div>
     <form class="flex flex-col gap-y-2 mt-4">
         <div class="flex items-center gap-x-2 bg-white rounded-lg py-4 px-3">
             <img src="assets/images/pages/contact/ic_name.svg" alt="" width="24" height="24" />

@@ -1,4 +1,4 @@
-import { DIALOG_DATA } from '@angular/cdk/dialog';
+import { DIALOG_DATA, DialogRef } from '@angular/cdk/dialog';
 import { CommonModule } from '@angular/common';
 import { Component, Inject } from '@angular/core';
 
@@ -18,26 +18,14 @@ export class DialogRecruitComponent {
     files: File[] = [];
     dataFile: number = 0;
 
-    constructor(@Inject(DIALOG_DATA) public data: DialogData) { }
+    constructor( public dialogRef: DialogRef<string>,@Inject(DIALOG_DATA) public data: DialogData) { }
 
     openFileDialog() {
         document.getElementById('upload-file')?.click();
     }
 
     fileChangeEvent(event: any): void {
-        // let data = [];
-        // data.push(...event.target.files);
-
-        // console.log('data',data);
         this.files.push(...event.target.files);
-        
-        // const file = event.target.files;
-        // console.log('file', file);
-        // for (let i = 0; i < file.length; i++) {
-        //     console.log('file[i]',file[i]);
-            
-        //     this.files.push(file[i]);
-        // }
         this.totalSizeFile();
         
     }
