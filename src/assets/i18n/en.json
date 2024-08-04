@@ -1,94 +1,13 @@
 {
     "common": {
-        "home": "HOME",
-        "about": "ABOUT",
-        "culture": "CULTURE",
-        "ecosystem": "Ecosystem",
-        "event": "EVENT",
-        "activity": "ACTIVITY",
-        "recruit": "RECRUIT",
-        "contact": "CONTACT",
-        "email": "Email",
-        "Email": "Email",
-        "name": "Name",
-        "full_name": "Full Name",
-        "input_content": "Content",
-        "phone": "Phone",
-        "page": "page",
-        "send": "Send",
-        "achievement": "Achievement",
-        "member": "Member",
-        "product": "Product"
-    },
-    "error": {
-        "Please_enter_the_correct_email_format": "Please enter the correct email format",
-        "Please_enter_the_correct_phone_number_format": "Please enter the correct phone number format",
-        "The_name_must_contain_at_least_3_characters": "The name must contain at least 3 characters"
+        
     },
     "home": {
-        "title": "Home",
-        "email": "welcome",
-        "general_introduction": "Giới thiệu chung",
-        "achievements": "Achievements",
-        "recruitment_hot": "Tuyển dụng nổi bật",
-        "partner": "Partner"
+        "introduce_des": "Mobile application software development company"
     },
-    "introduce": {
-        "time_line": "The Process Of Formation And Development",
-        "orientation": "Oriented Development"
-    },
-    "culture": {
-        "culture_4c": "Văn hóa 4C",
-        "culture_volio": "Văn hóa làm việc tại Volio",
-        "motto": "Phương châm",
-        "activity": "Hoạt động văn hóa"
-    },
-    "about": {
-        "title": "about",
-        "email": "email"
-    },
-    "contact": {
-        "title": "contact",
-        "email": "email",
-        "drag_or_drop": "Drag or drop files here",
-        "click_to_upload_file": "Or click to upload file"
-    },
-    "event": {
-        "title": "foreign affairs events",
-        "other_articles": "Other Articles",
-        "new_post": "New Post"
-    },
-    "activity": { "title": "activity" },
-    "recruit": {
-        "title": "recruitment",
-        "volio_group": "VOLIO GROUP",
-        "specialized": "Specialized",
-        "career_level": "Career Level",
-        "application_process_volio": "APPLICATION PROCESS AT VOLIO GROUP",
-        "preliminary_exam": "Preliminary exam",
-        "preliminary_exam_des": "(Response to test results within 3 working days of submitting the test)",
-        "screening_profile": "Screening profiles",
-        "screening_profile_des": "(Respond to application results within 5 working days of receiving CV)",
-        "interview": "Interview",
-        "interview_des": "(Interview online or offline)",
-        "result_interview": "Result interview",
-        "result_interview_des": "sent to email in 3-5 business days",
-        "mail": "Mail",
-        "address": "Address",
-        "salary": "Salary",
-        "quantity": "Quantity",
-        "experience": "Experience",
-        "job_posting_date": "Job posting date",
-        "scale": "Scale",
-        "the_deadline_for_submission": "The deadline for submission",
-        "working_time": "Working time",
-        "recruitment": "Recruitment",
-        "apply_for_this_job": "Apply for this job",
-        "submit": "Submit",
-        "other_related_job": "Other related job",
-        "company": "Company"
-    },
-    "govo": {},
-    "fidra": {},
-    "jacat": {}
+    "error": {
+        "Please_enter_the_correct_email_format": "Vui lòng nhập đúng định dạng email",
+        "Please_enter_the_correct_phone_number_format": "Vui lòng nhập đúng định dạng số điện thoại",
+        "The_name_must_contain_at_least_3_characters": "Tên phải chứa ít nhất 3 kí tự"
+    }
 }

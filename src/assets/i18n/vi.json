@@ -1,94 +1,13 @@
 {
     "common": {
-        "home": "Trang Chủ",
-        "about": "Giới thiệu",
-        "culture": "Văn hoá",
-        "ecosystem": "Ecosystem",
-        "event": "Sự kiện",
-        "activity": "Hoạt động",
-        "recruit": "Tuyển dụng",
-        "contact": "Liên hệ",
-        "email": "email",
-        "Email": "Email",
-        "name": "Tên",
-        "full_name": "Họ và tên",
-        "input_content": "Nhập nội dung",
-        "phone": "Điện thoại",
-        "page": "trang",
-        "send": "Gửi",
-        "achievement": "Thành tựu",
-        "member": "Thành viên",
-        "product": "Sản phẩm"
+        
+    },
+    "home": {
+        "introduce_des": "Mobile application software development company"
     },
     "error": {
         "Please_enter_the_correct_email_format": "Vui lòng nhập đúng định dạng email",
         "Please_enter_the_correct_phone_number_format": "Vui lòng nhập đúng định dạng số điện thoại",
         "The_name_must_contain_at_least_3_characters": "Tên phải chứa ít nhất 3 kí tự"
-    },
-    "home": {
-        "TITLE": "Trang Chủ",
-        "WELCOME_MESSAGE": "Chào mừng đến với trang chủ của chúng tôi",
-        "general_introduction": "Giới thiệu chung",
-        "achievements": "Thành tựu",
-        "recruitment_hot": "Tuyển dụng nổi bật",
-        "partner": "Đối tác"
-    },
-    "introduce": {
-        "time_line": "Quá trình hình thành và phát triển",
-        "orientation": "Định hướng phát triển"
-    },
-    "culture": {
-        "culture_4c": "Văn hóa 4C",
-        "culture_volio": "Văn hóa làm việc tại Volio",
-        "motto": "Phương châm",
-        "activity": "Hoạt động văn hóa"
-    },
-    "about": {
-        "TITLE": "Giới Thiệu",
-        "DESCRIPTION": "Chúng tôi là công ty XYZ"
-    },
-    "contact": {
-        "title": "Liên Hệ",
-        "email": "Email của chúng tôi là contact@company.com",
-        "drag_or_drop": "Kéo hoặc thả file vào đây",
-        "click_to_upload_file": "Hoặc nhấn để tải lên file"
-    },
-    "event": {
-        "title": "sự kiện đối ngoại",
-        "other_articles": "Bài viết khác",
-        "new_post": "Bài viết mới nhất"
-    },
-    "activity": { "title": "hoạt động nội bộ" },
-    "recruit": {
-        "title": "Tuyển dụng",
-        "volio_group": "VOLIO GROUP",
-        "specialized": "Chuyên ngành",
-        "career_level": "Trình độ nghề nghiệp",
-        "application_process_volio": "QUY TRÌNH ỨNG TUYỂN TẠI VOLIO GROUP",
-        "screening_profile": "Sàng lọc hồ sơ ",
-        "screening_profile_des": "(phản hồi kết quả hồ sơ trong vòng 5 ngày làm việc kể từ khi nhận CV)",
-        "preliminary_exam": "Bài thi sơ tuyển ",
-        "preliminary_exam_des": "(Phản hồi kết quả bài test trong vòng 3 ngày làm việc kể từ khi nộp bài test)",
-        "interview": "Phỏng vấn",
-        "interview_des": "(Phỏng vấn online hoặc offline)",
-        "result_interview": "Kết quả phỏng vấn",
-        "result_interview_des": "gửi đến mail trong 3-5 ngày làm việc",
-        "mail": "Mail",
-        "address": "Địa điểm",
-        "salary": "Lương",
-        "quantity": "Số lượng tuyển",
-        "experience": "Kinh nghiệm",
-        "job_posting_date": "Ngày đăng tuyển",
-        "scale": "Quy mô",
-        "the_deadline_for_submission": "Hạn nộp hồ sơ",
-        "working_time": "Thời gian làm việc",
-        "recruitment": "ứng tuyển",
-        "apply_for_this_job": "Nộp hồ sơ cho công việc này",
-        "submit": "Nộp hồ sơ",
-        "other_related_job": "Việc làm liên quan khác",
-        "company": "Công ty"
-    },
-    "govo": {},
-    "fidra": {},
-    "jacat": {}
+    }
 }
