@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import { BannerStartPageComponent } from '@shared/components/banner-start-page/banner-start-page.component';
+import { Dialog, DialogRef, DIALOG_DATA, DialogModule } from '@angular/cdk/dialog';
+import { DialogRecruitComponent } from '../dialog-recruit/dialog-recruit.component';
+
 
 @Component({
     selector: 'app-recruit-detail',
     standalone: true,
-    imports: [BannerStartPageComponent],
+    imports: [BannerStartPageComponent, DialogModule],
     templateUrl: './recruit-detail.component.html',
     styleUrl: './recruit-detail.component.scss'
 })
@@ -21,14 +24,18 @@ export class RecruitDetailComponent {
     workDays: string[] = ['T2', 'T3', 'T4', 'T5', 'T6'];
     workNoDays: string[] = ['T7', 'CN'];
 
-    scrollToId() {
-        const element = document.getElementById('form');
-            if (element) {
-                element.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start',
-                    inline: 'nearest',
-                });
-            }
+    constructor(public dialog: Dialog) { }
+
+    openDialog() {
+        this.dialog.open(DialogRecruitComponent, {
+            // minWidth: '620px',
+            // maxWidth: '700px',
+            width: '630px',
+            panelClass: 'dialog-recruit',
+            data: {
+                animal: 'panda',
+            },
+        });
     }
+
 }

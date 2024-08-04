@@ -1,0 +1,84 @@
+<div class="w-full">
+    <h3 class="text-sizeProduct font-bold text-colorLinkDefault">Thông tin ứng tuyển:</h3>
+    <form class="flex flex-col gap-y-2 mt-4">
+        <div class="flex items-center gap-x-2 bg-white rounded-lg py-4 px-3">
+            <img src="assets/images/pages/contact/ic_name.svg" alt="" width="24" height="24" />
+            <input type="text" class="w-full outline-none" placeholder="Tên của ban" />
+        </div>
+        <div class="flex items-center gap-x-2 bg-white rounded-lg py-4 px-3">
+            <img src="assets/images/pages/contact/ic_email.svg" alt="" width="24" height="24" />
+            <input type="text" class="w-full outline-none" placeholder="Email của bạn" />
+        </div>
+        <div class="flex items-center gap-x-2 bg-white rounded-lg py-4 px-3">
+            <img src="assets/images/pages/contact/ic_phone.svg" alt="" width="24" height="24" />
+            <input type="text" class="w-full outline-none" placeholder="Số điện thoại của bạn" />
+        </div>
+        <div>
+            <textarea rows="6" class="whitespace-pre rounded-lg outline-none w-full p-3"
+                placeholder="Lời giới thiệu:"></textarea>
+        </div>
+    </form>
+    <div class="mt-4">
+        <div class="flex justify-between gap-x-4">
+            <p class="text-xs font-medium text-[#363636]">File đính kèm: {{this.files.length}}/5 </p>
+            <p class="text-xs font-medium text-[#363636]">Tối đa: {{dataFile}}/100MB</p>
+        </div>
+        
+        @if(this.files?.length > 0) {
+        <div class="flex items-center gap-x-5 mt-4">
+            <div class="flex items-center gap-x-5 flex-1 overflow-x-auto pt-4">
+                @for (item of this.files; track $index; let index = $index) {
+                <div class="relative">
+                    <div
+                        class="flex justify-center items-center flex-col w-[96px] h-20 bg-white rounded-lg overflow-hidden relative">
+                        <img src="assets/images/pages/recruit/ic_file.svg" alt="" width="40" height="40" />
+                        <p class="text-xs  font-semibold mt-1 line-clamp-1 px-2">{{item.name}}</p>
+
+                    </div>
+                    <button type="button" class="absolute top-[-16px] right-[-16px]" (click)="handleFileDelete(index)">
+                        <img src="assets/images/pages/recruit/ic_remove.svg" alt="" width="32" height="32" />
+                    </button>
+                </div>
+                }
+            </div>
+            <div class="cursor-pointer" (click)="openFileDialog()">
+                <ng-container [ngTemplateOutlet]="upload"></ng-container>
+                
+            </div>
+        </div>
+
+        } @else {
+        <div class="cursor-pointer" (click)="openFileDialog()">
+            <div class="flex justify-center ">
+                <ng-container [ngTemplateOutlet]="upload"></ng-container>
+            </div>
+            <p class="mt-2 text-[10px] leading-4 text-center">Các định dạng file: word, excel, powpoint, PDF, notepad,
+                .txt, .rar, .zip</p>
+
+        </div>
+        }
+        @if(this.files?.length > 5 && dataFile > 100 ) {
+            <p class="text-xs font-medium text-red-500">Vui lòng không tải quá 5 file và dung lượng dưới 100MB</p>
+        } @else if(this.files?.length > 5 || dataFile > 100 ){
+            @if(this.files?.length > 5 ) {
+                <p class="text-xs font-medium text-red-500">Vui lòng không tải quá 5 file</p>
+            } @else {
+                <p class="text-xs font-medium text-red-500">Vui lòng không tải quá dung lượng dưới 100MB</p>
+            }
+        }
+    </div>
+    <button type="button"
+        class="mt-4 text-base leading-7 font-bold text-white py-[10px] rounded-lg w-full h-full block text-center"
+        [style]="false ? 'background-color: #00ADFF' : 'background-color:#E1E1E1'">
+        nộp hồ sơ
+    </button>
+</div>
+
+<ng-template #upload>
+    <div class="flex justify-center items-center flex-col w-[96px] h-20 bg-white">
+        <img src="assets/images/pages/recruit/ic_upload.svg" alt="" width="40" height="40" />
+        <p class="text-xs text-colorLinkDefault font-semibold mt-1 underline ">Upload</p>
+    </div>
+    <input id="upload-file" type="file" multiple (change)="fileChangeEvent($event)" class="hidden"
+                accept="image/*,video/*, audio/*, .xlsx,.xls,.doc, .docx,.ppt, .pptx,.txt,.pdf" />
+</ng-template>
